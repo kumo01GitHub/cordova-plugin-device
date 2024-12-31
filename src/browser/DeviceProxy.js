@@ -70,7 +70,6 @@ module.exports = {
     getDeviceInfo: function (success, error) {
         setTimeout(function () {
             success({
-                cordova: browser.cordovaVersion,
                 platform: getPlatform(),
                 model: getModel(),
                 version: getVersion(),
