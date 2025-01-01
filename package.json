@@ -1,6 +1,6 @@
 {
   "name": "@pelecanus/cordova-plugin-device",
-  "version": "1.0.0-3.0.0",
+  "version": "1.0.1-3.0.0",
   "description": "Cordova Device Plugin",
   "types": "./types/index.d.ts",
   "cordova": {
@@ -12,8 +12,8 @@
       "browser"
     ]
   },
-  "repository": "github:apache/cordova-plugin-device",
-  "bugs": "https://github.com/apache/cordova-plugin-device/issues",
+  "repository": "github:kumo01GitHub/cordova-plugin-device",
+  "bugs": "https://github.com/kumo01GitHub/cordova-plugin-device/issues",
   "keywords": [
     "cordova",
     "device",
