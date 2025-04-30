@@ -30,7 +30,7 @@ import android.provider.Settings;
 
 public class Device extends CordovaPlugin {
 
-    public static String uuid;                                // Device UUID
+    private static String uuid;                                // Device UUID
 
     private static final String ANDROID_PLATFORM = "Android";
 
@@ -88,7 +88,7 @@ public class Device extends CordovaPlugin {
      *
      * @return "Android"
      */
-    public String getPlatform() {
+    private String getPlatform() {
         return ANDROID_PLATFORM;
     }
 
@@ -97,19 +97,19 @@ public class Device extends CordovaPlugin {
      *
      * @return android.provider.Settings.Secure.ANDROID_ID
      */
-    public String getUuid() {
+    private String getUuid() {
         return Settings.Secure.getString(this.cordova.getContext().getContentResolver(), android.provider.Settings.Secure.ANDROID_ID);
     }
 
-    public String getModel() {
+    private String getModel() {
         return android.os.Build.MODEL;
     }
 
-    public String getManufacturer() {
+    private String getManufacturer() {
         return android.os.Build.MANUFACTURER;
     }
 
-    public String getSerialNumber() {
+    private String getSerialNumber() {
         return android.os.Build.SERIAL;
     }
 
@@ -118,15 +118,15 @@ public class Device extends CordovaPlugin {
      *
      * @return android.os.Build.VERSION.RELEASE
      */
-    public String getOSVersion() {
+    private String getOSVersion() {
         return android.os.Build.VERSION.RELEASE;
     }
 
-    public String getSDKVersion() {
+    private String getSDKVersion() {
         return String.valueOf(android.os.Build.VERSION.SDK_INT);
     }
 
-    public boolean isVirtual() {
+    private boolean isVirtual() {
 	return android.os.Build.FINGERPRINT.contains("generic") ||
 	    android.os.Build.PRODUCT.contains("sdk");
     }
