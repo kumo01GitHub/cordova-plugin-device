@@ -18,8 +18,6 @@
  * under the License.
  *
  */
-var browser = require('cordova/platform');
-
 function getPlatform () {
     return 'browser';
 }
